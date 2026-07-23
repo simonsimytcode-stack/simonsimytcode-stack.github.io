@@ -1,0 +1,583 @@
+/* ==========================================
+   BEAUTY CLINIC APPOINTMENT
+========================================== */
+
+:root{
+
+    --primary:#B8875B;
+    --primary-dark:#9E6F46;
+
+    --secondary:#EEDFD1;
+
+    --light:#FAF6F2;
+
+    --white:#FFFFFF;
+
+    --text:#5A4638;
+
+    --muted:#8A7568;
+
+    --border:#E7D7C9;
+
+    --shadow:0 20px 45px rgba(120,90,60,.15);
+
+}
+
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.6;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+/* ================= HEADER ================= */
+
+.site-header{
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(15px);
+
+    position:sticky;
+    top:0;
+    z-index:100;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.nav-wrapper{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    height:80px;
+
+}
+
+.logo{
+
+    font-size:1.6rem;
+    font-weight:700;
+    text-decoration:none;
+    color:var(--text);
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+.main-nav{
+
+    display:flex;
+    gap:35px;
+
+}
+
+.main-nav a{
+
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.main-nav a:hover,
+.main-nav .active{
+
+    color:var(--primary);
+
+}
+
+.header-button{
+
+    text-decoration:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+.header-button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ================= APPOINTMENT ================= */
+
+.appointment-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:100px 0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #FAF6F2,
+        #F4E8DD,
+        #E8D5C5
+    );
+
+}
+
+.appointment-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:#EEDFD1;
+
+    right:-180px;
+    top:-150px;
+
+    opacity:.5;
+
+}
+
+.appointment-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    background:#DDC4AE;
+
+    left:-120px;
+    bottom:-120px;
+
+    opacity:.4;
+
+}
+
+.appointment-layout{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.eyebrow{
+
+    display:inline-block;
+
+    background:#F2E4D6;
+
+    color:var(--primary);
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.appointment-intro h1{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.appointment-intro h1 span{
+
+    color:var(--primary);
+
+}
+
+.appointment-intro p{
+
+    color:var(--muted);
+
+    margin-bottom:35px;
+
+}
+
+.appointment-benefits{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.appointment-benefits div{
+
+    background:rgba(255,255,255,.6);
+
+    padding:18px 22px;
+
+    border-radius:15px;
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+}
+
+.appointment-benefits span{
+
+    width:38px;
+    height:38px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ================= CARD ================= */
+
+.appointment-card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.appointment-card h2{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.appointment-card p{
+
+    color:var(--muted);
+
+    margin-bottom:30px;
+
+}
+
+/* ================= FORM ================= */
+
+.form-group{
+
+    margin-bottom:22px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    background:#FFFDFC;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(184,135,91,.15);
+
+}
+
+.form-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+.button{
+
+    width:100%;
+
+    padding:17px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+        135deg,
+        #C79B74,
+        #A7754F
+    );
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(167,117,79,.30);
+
+}
+
+/* ================= WHY CHOOSE US ================= */
+
+.booking-preview{
+
+    padding:100px 0;
+
+    background:white;
+
+}
+
+.booking-preview-layout{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+}
+
+.booking-preview h2{
+
+    font-size:2.5rem;
+
+    margin:20px 0;
+
+}
+
+.booking-preview p{
+
+    color:var(--muted);
+
+}
+
+.benefit-list{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.benefit-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:var(--light);
+
+    padding:18px;
+
+    border-radius:15px;
+
+}
+
+.benefit-item span{
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/* ================= FOOTER ================= */
+
+.site-footer{
+
+    background:#4B392E;
+
+    color:#EEDFD1;
+
+    padding:50px 0 20px;
+
+}
+
+.footer-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:25px;
+
+}
+
+.footer-brand p{
+
+    margin-top:15px;
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    padding-top:20px;
+
+    font-size:.9rem;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.appointment-layout,
+.booking-preview-layout{
+
+grid-template-columns:1fr;
+
+}
+
+.main-nav{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.appointment-intro h1{
+
+font-size:2.8rem;
+
+}
+
+.appointment-card{
+
+padding:30px;
+
+}
+
+.form-row{
+
+grid-template-columns:1fr;
+
+}
+
+}
